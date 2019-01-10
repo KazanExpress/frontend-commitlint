@@ -1,4 +1,4 @@
-const { readFileSync } = require('fs');
+const { readFileSync, writeFileSync } = require('fs');
 
 let gitMessage;
 
@@ -29,6 +29,8 @@ if (!pattern.test(msg)) {
   const subject = matched[5] || '';
 
   finalMsg = (type ? type[0].toUpperCase() + type.substr(1) : '') + `${issue.trim()} [${scope}]${breaking}: ${subject}`;
+
+  writeFileSync(gitMessage, finalMsg)
 }
 
 console.log(finalMsg);
