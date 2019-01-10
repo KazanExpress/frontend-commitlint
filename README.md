@@ -46,6 +46,14 @@ Any commit message must consist of following parts:
 4. Change scope - a semi-complete scope of the change. Usually includes a path to the changed file or path to folder containing changed files. If a file contains a specific functionality, a method name can also be provided using dot-notation.
 5. Commit message written in a short informal way. Should precisely describe commit's change, giving context to it.
 
+If a commit message has a body, it should start with a preceding blank line, like this: 
+```
+Feature [modules/common]: new method toServer
+
+Convertable class can do reversed convertation from now on.
+But only with a separate convert function with it's own map
+```
+
 ### Possible change types
 - `Fix` - any sort of bugfix, usually requires an issue number following it (`Fix #40`, for example)
 - `Feature` - any sort of feature
