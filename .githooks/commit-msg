@@ -1,0 +1,3 @@
+#!/bin/sh
+
+node ./index.js | ./node_modules/@commitlint/cli/lib/cli.js -g ./config.js
