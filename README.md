@@ -15,6 +15,8 @@ This repository consists of two main things:
 2. Commit linter for NodeJS projects.
    - See the [`Linter installation`](#linter-installation) section for more info.
 
+If there are any proposals or comments on the matter - feel free to [create an issue](https://github.com/KazanExpress/ke-frontend-commitlint/issues/new)! 😉
+
 ---
 
 ## Commit formatting
