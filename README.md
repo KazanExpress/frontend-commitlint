@@ -37,17 +37,9 @@ We found several reasons for establishing commit conventions:
 ### Format
 
 Any commit message must consist of following parts:
-```
- ┌─ Change type [1]
- │
- │    ┌─ Related issue number, begins with "#" (optional) [2]
- │    │
- │    │ ┌─ Breaking change flag (optional) [3]
- │    │ │
-Fix #123! [path/module.method]: intial functionality
-                  │                  │
-Change scope [4] ─┘                  └─ Commit message [5]
-```
+
+<img src="./commit-format.png" width="50%">
+
 1. Change type - the first word in the commit message.
 2. Related issue, optional. Should be placed whenever changes in commit resolve or affect an issue in a certain way. If many issues are affected, choose the most relevant one and place others in commit message [5].
 3. Breaking change flag, optional. Shows if there was a breaking change in the commit.
