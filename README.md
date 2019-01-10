@@ -38,7 +38,7 @@ We found several reasons for establishing commit conventions:
 
 Any commit message must consist of following parts:
 
-<img src="./commit-format.png" width="50%">
+<img src="./commit-format.png" width="70%">
 
 1. Change type - the first word in the commit message.
 2. Related issue, optional. Should be placed whenever changes in commit resolve or affect an issue in a certain way. If many issues are affected, choose the most relevant one and place others in commit message [5].
