@@ -1,7 +1,7 @@
 const { always, never } = require('./util')
 
 module.exports = {
-  'body-leading-blank': always.warn(),
+  'body-leading-blank': always.error(),
   'footer-leading-blank': always.warn(),
   'header-max-length': always.error(100),
   'subject-case': never.error([
