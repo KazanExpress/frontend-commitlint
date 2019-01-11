@@ -19,6 +19,8 @@ module.exports = {
   'type-enum': always.error([
     'Fix',
     'Feature',
+    'Refactor',
+    '',
     'Add',
     'Update',
     'Remove'
