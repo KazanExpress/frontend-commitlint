@@ -1,5 +1,5 @@
 module.exports = {
   parserOpts: {
-    headerPattern: /^(\w+)(?: #\d+)?!? \[(.+?)\]: (.*)/
+    headerPattern: /^(\w+)(?: #\d+)?!* \[(.+?)\]: (.*)/
   }
 };
