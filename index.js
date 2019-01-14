@@ -12,7 +12,7 @@ if ('HUSKY_GIT_PARAMS' in process.env) {
 
 const msg = readFileSync(gitMessage).toString();
 
-const pattern = /^(\w+)(\s+\#\d+)?(\!*)\s* ([\w.].*?)?: (.*)/i;
+const pattern = /^(\w+)(\s+\#\d+)?(\!*)\s*( [\w.].*?)?: (.*)/i;
 
 let finalMsg;
 
@@ -25,7 +25,7 @@ if (!pattern.test(msg)) {
   const type = matched[1] ? matched[1].trim() : '';
   const issue = matched[2] ? ' ' + matched[2].trim() + ' ' : '';
   const breaking = matched[3] ? matched[3].trim() : '';
-  const scope = matched[4] ? `[${matched[4].trim()}]` : '';
+  const scope = matched[4] ? ` [${matched[4].trim()}]` : '';
   const subject = matched[5] || '';
 
   finalMsg = (type ? type[0].toUpperCase() + type.substr(1) : '') + issue + scope + `${breaking}: ${subject}`;
