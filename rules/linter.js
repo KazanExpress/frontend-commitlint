@@ -22,6 +22,10 @@ module.exports = {
     'Add',
     'Update',
     'Chore',
+    'Refactor',
+    'Content',
+    'Revert',
+    'Docs',
     'Remove'
   ])
 }
