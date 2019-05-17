@@ -1,5 +1,5 @@
 {
-  "name": "ke-frontend-commitlint",
+  "name": "@kazanexpress/frontend-commitlint",
   "version": "0.0.0",
   "description": "A commit linter for projects of KazanExpress frontend division",
   "main": "index.js",
@@ -7,7 +7,8 @@
   "author": "Raiondesu",
   "license": "Proprietary",
   "scripts": {
-    "preinstall": "git config core.hooksPath .githooks"
+    "preinstall": "git config core.hooksPath .githooks",
+    "postinstall": "git config core.hooksPath ./node_modules/@kazanexpress/frontend-commitlint/hooks"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.2.1"
