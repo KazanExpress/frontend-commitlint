@@ -21,6 +21,7 @@ module.exports = {
     'Feature',
     'Add',
     'Update',
+    'Chore',
     'Remove'
   ])
 }
