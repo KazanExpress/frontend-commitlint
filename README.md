@@ -1,4 +1,4 @@
-# ke-frontend-commitlint
+# @kazanexpress/frontend-commitlint
 
 > A commit linter for projects of KazanExpress frontend division
 
@@ -6,6 +6,24 @@
 ![forthebadge](https://forthebadge.com/images/badges/just-plain-nasty.svg)
 ![forthebadge](https://forthebadge.com/images/badges/no-ragrets.svg)
 ![forthebadge](https://forthebadge.com/images/badges/powered-by-responsibility.svg)
+
+
+## Linter installation
+
+### Environment requirements
+
+Check if your current environment adheres to these specs:
+- `NodeJS` version >= 8.0.0 installed in your bash environment.
+- `git` version >= 2.9.
+- Your operating system can execute bash scripts.
+
+### Installation
+
+To add the linter to your current project, just execute the following commands in your project's root directory:
+```bash
+npm i -D @commitlint/cli @kazanexpress/frontend-commitlint
+```
+
 
 ## About
 
@@ -29,79 +47,98 @@ We found several reasons for establishing commit conventions:
 - Easier change tracking.
 - Visually similar commit message format.
   - Easier visual analysis of commit messages.
-- Potential for automated changelog and semver generation.
+- Potential for automated changelog and semver updates generation.
 - informativity
   1. Commits should tell WHY they were made in the first place.
   2. Commits should provide context for changes they bring.
 
 ### Format
 
-Any commit message must consist of following parts:
+Any commit message header (first line) must consist of following parts:
 
 <img src="./commit-format.svg" width="70%">
 
-1. Change type - the first word in the commit message.
-2. Related issue, optional. Should be placed whenever changes in commit resolve or affect an issue in a certain way. If many issues are affected, choose the most relevant one and place others in commit message [5].
-3. Breaking change flag, optional. Shows if there was a breaking change in the commit.
-4. Change scope - a semi-complete scope of the change. Usually includes a path to the changed file or path to folder containing changed files. If a file contains a specific functionality, a method name can also be provided using dot-notation.
-5. Commit message written in a short informal way. Should precisely describe commit's change, giving context to it.
+1. **Type** - the first word in the commit message.
+   - Possible types:
+      - `Fix` - some bug or error is fixed (preferably with an issue number, see pt. 2).
+      - `Feature` - some new feature is introduced  (preferably with an issue number, see pt. 2).
+      - `Add` - addition of new things in general.
+         - `Add npm-package-name - v1.0.0` - example of adding a new npm package
+         - `Add modules/user - intial functionality` - example of adding a new module in folder `modules`
+      - `Update` - updating of things in general (package versions, for example).
+      - `Chore` - routine maintenance, things that do not directly fall into any other type.
+        - Choose this type if you **do not want to include** this change in the *final changelog*!
+      - `Refactor` - code/structure refactoring. File renames go here too.
+      - `Content` - changes to static content that do not affect functionality.
+      - `Revert` - commits/changes reverts.
+      - `Docs` - updates to documentation.
+      - `Remove` - removal of things in general (files, functionality, etc.).
+         - `Remove npm-package-name: deprecated` - example for removal of an existing npm package
+         - `Remove [User.oldFunction] modules/user: I'm sick of it` - example for removal of an existing function in module `user`
+
+2. **Related issue**, optional. Should be placed whenever changes in commit resolve or affect an issue in a certain way. If many issues are affected, choose the most relevant one and place others in commit message [6].
+
+3. **Breaking change flag**, optional. Shows if there was a breaking change in the commit.
+
+4. Change **scope** - a semi-complete scope of the change in a subject. Optional.
+
+5. **Subject** of the change - usually would be a file or a folder that is subject to change in this commit.
+   - Subject can be stated as `*` (as in `Add * - initial commit`) to specify that every possible subject is affected.
+   - Note: **scope** ([4]) should be omitted instead of specifying it as `*`.
+
+6. Commit **message** written in a short informal way. Should precisely describe commit's change, giving context to it.
 
 If a commit message has a body, it should start with a preceding blank line, like this: 
 ```
-Feature [modules/common]: new method toServer
+Feature [toServer] modules/common - new method `toServer`
 
 Convertable class can do reversed convertation from now on.
 But only with a separate convert function with it's own map
 ```
 
-### Possible change types
-- `Fix` - any sort of bugfix, usually requires an issue number following it (`Fix #40`, for example)
-- `Feature` - any sort of feature
-- `Add` - new functionality/module/package that cannot be represented as a bugfix or a feature.
-  - `Add [npm-package-name]: v1.0.0` - example for adding a new npm package
-  - `Add [modules/user]: intial functionality` - example for adding a new module in folder `modules`
-- `Update` - update to an existing functionality/module/package that cannot be represented as a bugfix or a feature.
-  - `Update [npm-package-name]: v1.1.1` - example for updating an existing npm package
-  - `Update [modules/user]: refactoring` - example for updating an existing module in folder `modules`
-- `Remove` - removal of an existing functionality/module/package that cannot be represented as a bugfix or a feature.
-  - `Remove [npm-package-name]: deprecated` - example for removal of an existing npm package
-  - `Remove [modules/user]: I'm sick of it` - example for removal of an existing module in folder `modules`
+If a commit message header (first line) is too long - informal message (`[6]`) can be omitted or replaced with a semicolon (`:`):
+```
+Feature [toServer] modules/common:
+
+Convertable class can do reversed convertation from now on.
+But only with a separate convert function using it's own map.
+```
 
 ### More examples:
 ```
-Update [commitlint]: refactor & move to a separate folder
-Fix [pattern]: fixed spaces in commitlint headerPattern
-Update [commitlint]: finish initial setup
-Update [store/modules/user.LOGOUT]: `order/clearContacts` was added
-Add [store/modules/order.reset]: `reset` mutation was added
+Refactor rules - restructure & move to a separate folder
 ```
+```
+Fix [headerPattern] rules/pattern - spaces in commitlint headerPattern
+```
+```
+Update *: finish initial setup
+```
+```
+Add [LOGOUT] store/modules/user - all-caps logout action
+```
+```
+Refactor [reset] store/modules/order:
 
+reset mutation now uses default object factory instead of hard-coding values
+```
+```
+Remove parakeet-mapper - they fixed backend
+```
+```
+Fix #132 [Product.constructor] types/models/product:
+
+object reference was being wrongly reassigned
+```
+```
+Chore [tmpVer] store/plugins - bump store version
+```
+```
+Chore [LOGOUT] store/module/* - make interconnected logouts work
+```
+```
+Chore [rr-widget] pages/product - make interconnected logouts work
+```
 ---
-
-## Linter installation
-
-### Environment requirements
-
-Check if your current environment adheres to these specs:
-- `NodeJS` version >= 8.0.0 installed in your bash environment.
-- `git` version >= 2.9.
-- Your operating system can execute bash scripts.
-
-### Installation
-
-To add the linter to your current project, just execute the following commands in your project's root directory:
-```bash
-# For git https mode
-git submodule add https://github.com/KazanExpress/ke-frontend-commitlint.git .commitlint
-
-# For git ssh mode
-git submodule add git@github.com:KazanExpress/ke-frontend-commitlint.git .commitlint
-
-npm i -D @commitlint/cli
-
-git config core.hooksPath ./.commitlint/hooks
-```
-
-
 
 [![forthebadge](https://forthebadge.com/images/badges/oooo-kill-em.svg)](https://forthebadge.com)
