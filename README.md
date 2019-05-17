@@ -104,7 +104,7 @@ Convertable class can do reversed convertation from now on.
 But only with a separate convert function using it's own map.
 ```
 
-### More examples:
+### Examples:
 ```
 Refactor rules - restructure & move to a separate folder
 ```
@@ -115,7 +115,7 @@ Fix [headerPattern] rules/pattern - spaces in commitlint headerPattern
 Update *: finish initial setup
 ```
 ```
-Add [LOGOUT] store/modules/user - all-caps logout action
+Add [LOGOUT] store/modules/user
 ```
 ```
 Refactor [reset] store/modules/order:
@@ -137,7 +137,7 @@ Chore [tmpVer] store/plugins - bump store version
 Chore [LOGOUT] store/module/* - make interconnected logouts work
 ```
 ```
-Chore [rr-widget] pages/product - make interconnected logouts work
+Chore [rr-widget] pages/product - again updates for retail-rocket
 ```
 ---
 
