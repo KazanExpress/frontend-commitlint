@@ -13,7 +13,7 @@ module.exports = {
   'subject-empty': never.error(),
   'subject-full-stop': never.error('.'),
   'type-empty': never.error(),
-  'scope-case': always.error('lower-case'),
+  'scope-case': never.error([]),
   'type-case': always.error('sentence-case'),
 
   'type-enum': always.error([
