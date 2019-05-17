@@ -73,8 +73,8 @@ Any commit message header (first line) must consist of following parts:
       - `Revert` - commits/changes reverts.
       - `Docs` - updates to documentation.
       - `Remove` - removal of things in general (files, functionality, etc.).
-         - `Remove npm-package-name: deprecated` - example for removal of an existing npm package
-         - `Remove [User.oldFunction] modules/user: I'm sick of it` - example for removal of an existing function in module `user`
+         - `Remove npm-package-name - deprecated` - example for removal of an existing npm package
+         - `Remove [User.oldFunction] modules/user - I'm sick of it` - example for removal of an existing function in module `user`
 
 2. **Related issue**, optional. Should be placed whenever changes in commit resolve or affect an issue in a certain way. If many issues are affected, choose the most relevant one and place others in commit message [6].
 
