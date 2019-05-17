@@ -10,7 +10,7 @@
     "preinstall": "git config core.hooksPath .githooks",
     "postinstall": "git config core.hooksPath ./node_modules/@kazanexpress/frontend-commitlint/hooks"
   },
-  "devDependencies": {
+  "dependencies": {
     "@commitlint/cli": "^7.2.1"
   }
 }
