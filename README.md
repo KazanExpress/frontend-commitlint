@@ -21,7 +21,7 @@ Check if your current environment adheres to these specs:
 
 To add the linter to your current project, just execute the following commands in your project's root directory:
 ```bash
-npm i -D @commitlint/cli @kazanexpress/frontend-commitlint
+npm i -D @kazanexpress/frontend-commitlint
 ```
 
 
