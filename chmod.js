@@ -1,3 +1,3 @@
-import { chmodSync } from 'fs';
+const fs = require('fs');
 
-chmodSync('./hooks/commit-msg', '+x')
+fs.chmodSync('./hooks/commit-msg', '+x')
