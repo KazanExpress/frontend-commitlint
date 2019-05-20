@@ -8,7 +8,7 @@
   "license": "Proprietary",
   "scripts": {
     "preinstall": "git config core.hooksPath .githooks",
-    "postinstall": "git config core.hooksPath ./node_modules/@kazanexpress/frontend-commitlint/hooks && chmod -v +x ./hooks/commit-msg"
+    "postinstall": "git config core.hooksPath ./node_modules/@kazanexpress/frontend-commitlint/hooks && node ./chmod.js"
   },
   "dependencies": {
     "@commitlint/cli": "^7.2.1"
