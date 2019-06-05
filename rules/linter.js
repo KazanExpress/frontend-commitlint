@@ -4,12 +4,7 @@ module.exports = {
   'body-leading-blank': always.error(),
   'footer-leading-blank': always.warn(),
   'header-max-length': always.error(100),
-  'subject-case': never.error([
-    'sentence-case',
-    'start-case',
-    'pascal-case',
-    'upper-case'
-  ]),
+  'subject-case': never.error([]),
   'subject-empty': never.error(),
   'subject-full-stop': never.error('.'),
   'type-empty': never.error(),
