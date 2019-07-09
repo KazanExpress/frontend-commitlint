@@ -1,6 +1,6 @@
 {
   "name": "@kazanexpress/frontend-commitlint",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "A commit linter for projects of KazanExpress frontend division",
   "main": "index.js",
   "bin": "index.js",
