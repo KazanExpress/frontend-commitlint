@@ -28,7 +28,7 @@ npm i -D @kazanexpress/frontend-commitlint
 ## About
 
 This repository consists of two main things:
-1. A comprehensive description of rules for commit conventions at [KazanExpress/FrontEnd](https://github.com/orgs/KazanExpress/teams/frontend).
+1. A comprehensive description of rules for commit conventions at [KazanExpress/Frontend Team](https://github.com/orgs/KazanExpress/teams/frontend-team).
    - See the [`Commit formatting`](#commit-formatting) section for more info.
 2. Commit linter for NodeJS projects.
    - See the [`Linter installation`](#linter-installation) section for more info.
