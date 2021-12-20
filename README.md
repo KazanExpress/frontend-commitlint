@@ -96,9 +96,9 @@ Convertable class can do reversed convertation from now on.
 But only with a separate convert function with it's own map
 ```
 
-If a commit message header (first line) is too long - informal message (`[6]`) can be omitted or replaced with a semicolon (`:`):
+If a commit message header (first line) is too long - informal message (`[6]`) can be omitted:
 ```
-Feature [toServer] modules/common:
+Feature [toServer] modules/common
 
 Convertable class can do reversed convertation from now on.
 But only with a separate convert function using it's own map.
@@ -112,13 +112,13 @@ Refactor rules - restructure & move to a separate folder
 Fix [headerPattern] rules/pattern - spaces in commitlint headerPattern
 ```
 ```
-Update *: finish initial setup
+Update * - finish initial setup
 ```
 ```
 Add [LOGOUT] store/modules/user
 ```
 ```
-Refactor [reset] store/modules/order:
+Refactor [reset] store/modules/order
 
 reset mutation now uses default object factory instead of hard-coding values
 ```
@@ -126,7 +126,7 @@ reset mutation now uses default object factory instead of hard-coding values
 Remove parakeet-mapper - they fixed backend
 ```
 ```
-Fix #132 [Product.constructor] types/models/product:
+Fix #132 [Product.constructor] types/models/product
 
 object reference was being wrongly reassigned
 ```
